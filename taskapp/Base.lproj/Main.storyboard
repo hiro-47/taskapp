@@ -79,7 +79,7 @@
         <!--Input View Controller-->
         <scene sceneID="oCA-kZ-Gc4">
             <objects>
-                <viewController id="bxV-7F-6cJ" customClass="inputViewController" customModule="taskapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bxV-7F-6cJ" customClass="InputViewController" customModule="taskapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Thl-GL-ZTu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,9 +143,9 @@
                         <viewLayoutGuide key="safeArea" id="0ZZ-5i-ato"/>
                     </view>
                     <connections>
-                        <outlet property="contentsTextView" destination="hWk-20-aPA" id="Rj5-2X-sJs"/>
-                        <outlet property="datePicker" destination="Dbg-19-UWq" id="Dby-L4-5eh"/>
-                        <outlet property="titleTextField" destination="vhB-hG-9gf" id="a58-qX-FLb"/>
+                        <outlet property="contentsTextView" destination="hWk-20-aPA" id="Aji-ru-s6d"/>
+                        <outlet property="datePicker" destination="Dbg-19-UWq" id="crI-gC-nFQ"/>
+                        <outlet property="titleTextField" destination="vhB-hG-9gf" id="jKw-2x-IjC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ELI-ar-Qf6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -168,7 +168,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="121-WK-bGD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-304" y="509"/>
+            <point key="canvasLocation" x="-168" y="500"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

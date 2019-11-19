@@ -15,6 +15,13 @@ class Task: Object {
     // タイトル
     @objc dynamic var title = ""
     
+    
+    
+    @objc dynamic var  category:String?
+    
+    
+
+    
     // 内容
     @objc dynamic var contents = ""
     

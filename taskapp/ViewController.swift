@@ -10,12 +10,9 @@ import UIKit
 
 import RealmSwift
 import UserNotifications
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate{
 
-    
-    
-    
-    
+    @IBOutlet weak var searchText: UISearchBar!
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -52,7 +49,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
+        searchText.delegate = self
+        searchText.placeholder = "入力"
     }
+    
+    
+    
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        view.endEditing(true)
+       
+            
+            taskArray = try! Realm().objects(Task.self).filter("category == %@", searchBar.text!)
+        tableView.reloadData()
+       print("コメント")
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return taskArray.count
     }

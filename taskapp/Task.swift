@@ -17,7 +17,7 @@ class Task: Object {
     
     
     
-    @objc dynamic var  category:String?
+    @objc dynamic var  category:String  = ""
     
     
 

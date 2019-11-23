@@ -51,6 +51,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.dataSource = self
         searchText.delegate = self
         searchText.placeholder = "入力"
+        searchText.showsCancelButton = true
     }
     
     
@@ -60,10 +61,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         view.endEditing(true)
        
             
-            taskArray = try! Realm().objects(Task.self).filter("category == %@", searchBar.text!)
+         taskArray = try! Realm().objects(Task.self).filter("category == %@", searchBar.text!)
         tableView.reloadData()
-       print("コメント")
+            print("コメント")
+        
+        
+        
+        
     }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+       view.endEditing(true)
+         taskArray = try! Realm().objects(Task.self).sorted(byKeyPath: "date", ascending: false)
+       tableView.reloadData()
+    }
+    
+    
+    
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return taskArray.count

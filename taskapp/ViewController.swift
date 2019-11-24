@@ -19,7 +19,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
    let realm = try! Realm()
     var taskArray = try! Realm().objects(Task.self).sorted(byKeyPath: "date", ascending: false)
 
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         let inputViewController:InputViewController = segue.destination as! InputViewController
         
@@ -54,9 +53,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         searchText.showsCancelButton = true
     }
     
-    
-    
-    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         view.endEditing(true)
        
@@ -64,10 +60,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
          taskArray = try! Realm().objects(Task.self).filter("category == %@", searchBar.text!)
         tableView.reloadData()
             print("コメント")
-        
-        
-        
-        
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
@@ -75,9 +67,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
          taskArray = try! Realm().objects(Task.self).sorted(byKeyPath: "date", ascending: false)
        tableView.reloadData()
     }
-    
-    
-    
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -125,10 +114,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     print(request)
                     print("---------------/")
                 }
-            
-            
         }
-        
 }
 }
 }

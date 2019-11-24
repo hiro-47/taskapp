@@ -82,7 +82,7 @@
                     <connections>
                         <outlet property="searchText" destination="UGy-kE-bfy" id="eht-Sh-6b2"/>
                         <outlet property="tableView" destination="J9X-Gx-Izg" id="7qK-IG-AwQ"/>
-                        <segue destination="bxV-7F-6cJ" kind="show" identifier="cellSegue" id="ZPV-R5-K1E"/>
+                        <segue destination="bxV-7F-6cJ" kind="show" identifier="cellSegue" id="YeO-AC-lBw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -206,6 +206,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ZPV-R5-K1E"/>
+        <segue reference="YeO-AC-lBw"/>
     </inferredMetricsTieBreakers>
 </document>
